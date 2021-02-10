@@ -31,7 +31,7 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # De Artifact is het resultaat van deze pipeline. Omdat we deze publiceren, kan een deployment-pipeline deze weer oppikken om "uit te rollen" naar andere omgevingen.
-- task: PublishPipelineArtifact@1
+- task PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'SQLDW'
